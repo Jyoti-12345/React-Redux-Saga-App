@@ -4,7 +4,7 @@ import { combineReducers} from 'redux';
 const initalState ={
     loading:false,
     user:[],
-    error:{},
+    error:false,
     userLength:null,
     loadingMoreUser: false, 
     errorMoreStores: false            
@@ -29,7 +29,7 @@ export const fetchDataReducer =(state = initalState, action)=>{
                 loading:false,
                 user: action.payload.data,
                 userLength: action.payload.totalPages,
-                error: {},
+                error: false,
                 loadingMoreUser: false, 
                 errorMoreStores: false            
             }
@@ -64,7 +64,7 @@ export const fetchDataReducer =(state = initalState, action)=>{
                 user: newUserData, 
                 userLength: action.payload.totalPages,
                 loadingMoreUser: false, 
-                errorMoreStores: {}
+                errorMoreStores: false
             }
             // const newStoreData = [...state.data, ...action.data.stores];
             // return Object.assign({}, state, { isFetching: false, error: false, data: newStoreData, totalStoresLength: action.data.totalStores, isFetchingMoreStores: false, errorMoreStores: false });
