@@ -57,11 +57,8 @@ function Navbar() {
               Services <i className='fas fa-caret-down' />
             </Link>
             {dropdown && <Dropdown />}
-
           </li>
-
         </ul>
-
       </nav>
     </>
     <Switch>

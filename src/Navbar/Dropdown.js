@@ -20,7 +20,7 @@ function Dropdown() {
             </li>
       </ul>
     </>
-    <Route path="/Passangerspage" component={PassangersPage}/>
+    <Route path="/passangerspage" component={PassangersPage}/>
     </Router>
   );
 }
