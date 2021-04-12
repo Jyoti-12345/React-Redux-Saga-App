@@ -12,7 +12,7 @@
 }
 
 .dropdown-menu.clicked {
-  display: block;
+  display: none;
 }
 
 .dropdown-link {

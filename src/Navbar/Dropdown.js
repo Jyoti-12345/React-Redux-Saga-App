@@ -1,28 +1,36 @@
 import React, { useState } from 'react';
-import './Dropdown.css';
-import { Link,BrowserRouter as Router, Route} from 'react-router-dom';
-import { PassangersPage } from '../component/PassangersPage';
+import './dropDown.css';
+import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
+import contactUS from './contactUs';
+import about from './about';
 
-function Dropdown() {
+function DropDown() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
 
   return (
     <Router>
-    <>
-    <ul
-        onClick={handleClick}
-        className={click ? 'dropdown-menu clicked' : 'dropdown-menu'}
-      >
-            <li >
-              <Link to= "/passangerspage">PassangersPage</Link>
-            </li>
-      </ul>
-    </>
-    <Route path="/passangerspage" component={PassangersPage}/>
+      <>
+        <ul
+          onClick={handleClick}
+          className={click ? 'dropdown-menu clicked' : 'dropdown-menu'}
+        >
+          <li >
+            <Link to="/about">About</Link>
+          </li>
+          <li >
+            <Link to="/contactus">ContactUS</Link>
+          </li>
+          <li >
+            <Link to="/passangerspage">PassangersPage</Link>
+          </li>
+        </ul>
+      </>
+      <Route path="/about" component={about} />
+      <Route path="/contactus" component={contactUS} />
     </Router>
   );
 }
 
-export default Dropdown;
+export default DropDown;

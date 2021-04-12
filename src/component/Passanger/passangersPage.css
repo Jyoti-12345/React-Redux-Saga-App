@@ -14,7 +14,7 @@
 .items {
   width: 100%;
   max-width: 325px;
-  height: 300px auto;
+  height: 325px;
   padding: 10px;
   background: #373b56;
   color: white;
@@ -33,4 +33,7 @@ button {
   font-size: 18px;
   margin-left: 0px;
   margin-bottom: 20px;
+}
+p{
+  padding: 10px;
 }
