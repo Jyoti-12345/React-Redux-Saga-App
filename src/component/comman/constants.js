@@ -6,5 +6,5 @@ export const LOAD_MORE_DETAILS_SUCCESS = 'LOAD_MORE_DETAILS_SUCCESS';
 export const LOAD_MORE_DETAILS_ERROR = 'LOAD_MORE_DETAILS_ERROR';
 export const PASSANGER_START_PAGE = 0;
 export const PASSANGER_DEFAULT_SIZE = 40;
-export const FETCH_PAGE = 1;
 export const VISIBLE_QUANTITY = 40;
+export const FETCH_PAGE = 1;

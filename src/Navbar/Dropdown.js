@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './dropDown.css';
-import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
-import contactUS from './contactUs';
-import about from './about';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 function DropDown() {
   const [click, setClick] = useState(false);
@@ -27,8 +25,6 @@ function DropDown() {
           </li>
         </ul>
       </>
-      <Route path="/about" component={about} />
-      <Route path="/contactus" component={contactUS} />
     </Router>
   );
 }

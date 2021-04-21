@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from './actions';
+import * as actions from '../comman/actions';
 import './passangersPage.css';
 import {
   PASSANGER_DEFAULT_SIZE,
   PASSANGER_START_PAGE,
   FETCH_PAGE,
   VISIBLE_QUANTITY,
-} from './constants';
-import Button from './comman/button';
-import ProductList from './comman/productList';
+} from '../comman/constants';
+import Button from './button';
+import ProductList from '../comman/productList';
 import PropTypes from 'prop-types';
 
 export class passangersPage extends Component {
@@ -49,6 +49,7 @@ export class passangersPage extends Component {
       user, loading, userLength, loadingMoreUser,
     } = this.props;
     const { visible, page } = this.state;
+    console.log(user, loading);
     return (
       <>
         <h1>
@@ -59,13 +60,19 @@ export class passangersPage extends Component {
         <div className="container">
           {
             loading ? <h1>loading...</h1>
-              : user.slice(0, visible).map((data) => <ProductList data={data} key={data._id} />)
+              :
+               user.slice(0, visible).map((data) => 
+              <ProductList 
+               data={data} 
+               key={data._id} 
+              />)
           }
-          {
-            loadingMoreUser ? <h1>loading...</h1>
-              : (page < userLength)
-                ? <Button loadMoreData={this.loadMoreData} /> : null
-          }
+          <Button 
+          loadMoreData = {this.loadMoreData}
+          userLength = {userLength}
+          loadingMoreUser= {loadingMoreUser}
+          page = {page}
+          />
         </div>
       </>
     );

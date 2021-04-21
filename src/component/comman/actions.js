@@ -5,14 +5,12 @@ import {
   LOAD_MORE_DETAILS,
   LOAD_MORE_DETAILS_SUCCESS,
   LOAD_MORE_DETAILS_ERROR,
-} from './constants';
+} from '../comman/constants';
 
-export function fetchData(data) {
-  return {
+export const fetchData = (data) => ({
     type: SEND_REQUEST,
     payload: data,
-  };
-}
+});
 export const fetchDataSuccess = (data) => ({
   type: SEND_REQUEST_SUCESS,
   payload: data,
@@ -22,12 +20,10 @@ export const fetchDataFailure = (error) => ({
   payload: {},
   error,
 });
-export function fetchLoadMoreData(data) {
-  return {
+export const fetchLoadMoreData = (data) => ({
     type: LOAD_MORE_DETAILS,
     payload: data,
-  };
-}
+});
 export const fetchLoadMoreDataSuccess = (data) => ({
   type: LOAD_MORE_DETAILS_SUCCESS,
   payload: data,
